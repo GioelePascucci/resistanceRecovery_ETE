@@ -4,27 +4,31 @@
 
 ## Description
 
-This repository contains the metadata, raw data, phylogenetic information, and R scripts necessary to reproduce the analyses and figures for the manuscript: "Pascucci, G., Tejedo, M., Gvoždík, L. Correlated evolution of thermal tolerance and egg size links resistance and recovery to extreme heat in amphibians".
+This repository contains the raw data, phylogenetic information, and R scripts necessary to reproduce the analyses and figures of the manuscript "Correlated evolution of thermal tolerance and egg size links resistance and recovery to extreme heat in amphibians" (Pascucci, G., Tejedo, M., Gvoždík, L.).
 
 This material can be freely shared, adapted, or reprocessed (including for commercial use) as long as appropriate credit is given to the authors.
 License details: [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 **You can cite this repository as:**
-Pascucci, G. (2026). Data from: Correlated evolution of thermal tolerance and egg size links resistance and recovery to extreme heat in amphibians (Version 1.0.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23039857
+Pascucci, G., Tejedo, M., & Gvoždík, L. (2026). Data from: Correlated evolution of thermal tolerance and egg size links resistance and recovery to extreme heat in amphibians (Version 1.0.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23039857
 
 **Repository contact:** Gioele Pascucci ([gioelepascucci@live.it](mailto:gioelepascucci@live.it))
 
-## Data collection & processing summary
+## Abstract
+We tested 83 species of amphibians (Anura, 43; Caudata, 40), representing 19 familes. Using phylogenetic comparative analyses, across multiple evolutionary models, we investigated correlations between critical thermal maximum (CTmax) and three life-history traits, clutch size, egg size, and age at maturity, while controlling for geographic gradients and body size (snout-vent length).
 
-Primary physiological and life-history traits data were compiled across 83 amphibian species from published literature and established database sources. Thermal tolerance values were standardized for acclimation temperature, duration, and physiological endpoints using `heatTolerance.R`. Spatial range maps and occurrence records were retrieved from GBIF (gbif.org, 2026) and IUCN (2025), then integrated with elevation raster from WorldClim 2.1 (Fick & Hijmans, 2017), using `speciesRange.R` to compute elevation ranges. All statistical analyses were conducted within a phylogenetically informed framework (e.g, Phylogenetic Generalized Least Squares) in R v4.5.3 (R Core Team, 2026; complete package version details are documented in `sessionR_info.txt`). For full details on variable definitions and methodologies, refer to the main article and the metadata sheets within each data file provided in this repository.
+## Data collection & processing
 
----
+Primary physiological and life-history traits data were compiled from published literature and established databases.
+Thermal tolerance values were standardized for acclimation temperature, duration, and physiological endpoints using `heatTolerance.R`.
+Species range maps and occurrence records were retrieved from IUCN (2025) and GBIF (gbif.org, 2026), then integrated with elevation raster from WorldClim 2.1 (Fick & Hijmans, 2017), using `speciesRange.R`.
+Phylogenetic comparative analyses (e.g., PGLS and multivariate PGLS) based on the Jetz and Pyron (2018) phylogeny were implemented in R v4.5.3 (R Core Team, 2026). The complete analyses workflow and R package environment are provided in `main.R` and `sessionR_info.txt`, respectively.
 
 ## Directory structure
 
 ```text
 
-├── sessionR_info.txt       : R version and package versions used for the analysis.
+├── sessionR_info.txt       : R version and package versions used for the analyses.
                               
 
 /data
@@ -53,8 +57,7 @@ Primary physiological and life-history traits data were compiled across 83 amphi
 │                     Elevation Models) to calculate species distribution.
 │   
 └── main.R          : Reproduce all primary analyses of the study, 
-                      including PGLS models, plot generation, literature 
-                      analysis summaries, diagnostic tests, and sensitivity 
+                      including PGLS models, plot generation, diagnostic tests, and sensitivity 
                       analyses.
 
 ```
@@ -62,13 +65,13 @@ Primary physiological and life-history traits data were compiled across 83 amphi
 
 ---
 
-## Setup and analysis workflow
+## Setup and analyses workflow
 
 To successfully replicate the study, please follow the steps in the exact order below.
 
 ### Step 1: Download required external data
 
-Before running any scripts, you must download the following external datasets and place them directly into the `/data` directory.
+Before running any scripts, you must download the following external datasets and place them directly into the `/data` directory (keep .zip files compressed).
 <p></p>
 
 1. **AmphiTherm dataset** (Pottier et al., 2025)
@@ -89,14 +92,14 @@ Once all data files are located in the `/data` folder, run the R scripts in the 
 <p></p>
 
 1. **`heatTolerance.R`**
-   * **Action:** Standardizes the thermal tolerance data.
+   * **Action:** Standardize the thermal tolerance data.
 <p></p>
 
 2. **`speciesRange.R`**
-   * **Action:** Calculates the spatial distribution and altitudinal ranges for the species.
+   * **Action:** Calculate the spatial distribution and elevation ranges for the species.
 <p></p>
 
 3. **`main.R`**
-   * **Action:** Executes the core phylogenetic and statistical analyses and generates the final manuscript figures.
+   * **Action:** Execute the core phylogenetic and statistical analyses and produce the manuscript figures.
 
 ---
