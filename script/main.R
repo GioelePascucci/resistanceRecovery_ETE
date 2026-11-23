@@ -1,6 +1,6 @@
 # ==============================================================================
 # Script title: main.R
-# Description:  The script includes all the main analysis of the article,
+# Description:  The script includes all the main analyses of the manuscript,
 #               included PGLS, plot generation, literature analysis, diagnostic 
 #               test and sensitivity analyses.
 # Manuscript title: Correlated evolution of thermal tolerance and egg size 
@@ -8,7 +8,7 @@
 # Manuscript authors: Gioele Pascucci, Miguel Tejedo, Lumír Gvoždík
 # Script author: Gioele Pascucci
 # Contact:  gioelepascucci@live.it
-# Date: August 30, 2026
+# Date: November 23, 2026
 # R Version:  4.5.3
 # ==============================================================================
 
@@ -576,11 +576,26 @@ ggsave(
   dpi = 600
 )
 ggsave(
-  "../figure/figure1.png", 
+  "../figure/figure1.jpeg", 
   plot = plot_literature, 
   width = 6, 
   height = 5, 
   dpi = 600
+)
+ggsave(
+  "../figure/figure1.tif", 
+  plot = plot_literature, 
+  width = 6, 
+  height = 5, 
+  dpi = 600
+)
+ggsave(
+  "../figure/figure1.eps", 
+  plot = plot_literature, 
+  width = 6, 
+  height = 5, 
+  dpi = 600,
+  device = cairo_ps
 )
 
 #Figure 2 (Partial residual)
@@ -690,7 +705,7 @@ plot_combined <- y_axis_plot + data_panels + plot_layout(widths = c(1, 25))
 
 print(plot_combined)
 ggsave(
-  filename = "../figure/figure2.png", 
+  filename = "../figure/figure2.jpeg", 
   plot = plot_combined, 
   width = 8, height = 6.5, dpi = 600, bg = "white"
 )
@@ -698,6 +713,16 @@ ggsave(
   filename = "../figure/figure2.pdf", 
   plot = plot_combined, 
   width = 8, height = 6.5, dpi = 600, bg = "white"
+)
+ggsave(
+  filename = "../figure/figure2.tif", 
+  plot = plot_combined, 
+  width = 8, height = 6.5, dpi = 600, bg = "white"
+)
+ggsave(
+  filename = "../figure/figure2.eps", 
+  plot = plot_combined, 
+  width = 8, height = 6.5, dpi = 600, bg = "white", device = cairo_ps
 )
 
 
@@ -768,7 +793,7 @@ print(plot_multi)
 
 # Export plot
 ggsave(
-  filename = "../figure/figure3.png", 
+  filename = "../figure/figure3.jpeg", 
   plot = plot_multi, 
   width = 8, 
   height = 8, 
@@ -782,6 +807,23 @@ ggsave(
   height = 8, 
   dpi = 600, 
   bg = "white"
+)
+ggsave(
+  filename = "../figure/figure3.tif", 
+  plot = plot_multi, 
+  width = 8, 
+  height = 8, 
+  dpi = 600, 
+  bg = "white"
+)
+ggsave(
+  filename = "../figure/figure3.eps", 
+  plot = plot_multi, 
+  width = 8, 
+  height = 8, 
+  dpi = 600, 
+  bg = "white",
+  device = cairo_ps
 )
 
 # Figure S2-A
