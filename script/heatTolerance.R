@@ -1,6 +1,6 @@
 # ==============================================================================
 # Script title: heatTolerance.R
-# Description:  The script standardizes CTmax values from different studies to the
+# Description:  This script standardizes CTmax values from different studies to the
 #               same acclimation temperature, acclimation time and endpoint.
 # Manuscript title: Correlated evolution of thermal tolerance and egg size 
 #                links resistance and recovery to extreme heat in amphibians.
