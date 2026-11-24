@@ -9,8 +9,6 @@ This repository contains the raw data, phylogenetic information, and R scripts n
 This material can be freely shared, adapted, or reprocessed (including for commercial use) as long as appropriate credit is given to the authors.
 License details: [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
-**You can cite this repository as:**
-Pascucci, G., Tejedo, M., & Gvoždík, L. (2026). Data from: Correlated evolution of thermal tolerance and egg size links resistance and recovery to extreme heat in amphibians (Version 1.0.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23039857
 
 **Repository contact:** Gioele Pascucci ([gioelepascucci@live.it](mailto:gioelepascucci@live.it))
 
@@ -28,7 +26,7 @@ Phylogenetic comparative analyses (e.g., PGLS and multivariate PGLS) based on th
 
 ```text
 
-├── sessionR_info.txt       : 	R package environment.
+├── sessionR_info.txt       : R package environment.
                               
 
 /data
