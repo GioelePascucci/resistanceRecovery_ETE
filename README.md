@@ -89,15 +89,12 @@ Before running any scripts, you must download the following external datasets an
 Once all data files are located in the `/data` folder, run the R scripts in the following sequence:
 <p></p>
 
-1. **`heatTolerance.R`**
-   * **Action:** Standardize the thermal tolerance data.
+1. **`heatTolerance.R`**: Standardize the thermal tolerance data.
 <p></p>
 
-2. **`speciesRange.R`**
-   * **Action:** Calculate the spatial distribution and elevation ranges for the species.
+2. **`speciesRange.R`**: Calculate the spatial distribution and elevation ranges for the species.
 <p></p>
 
-3. **`main.R`**
-   * **Action:** Execute the core phylogenetic and statistical analyses and produce the manuscript figures.
+3. **`main.R`**: Execute the core phylogenetic and statistical analyses and produce the manuscript figures.
 
 ---
