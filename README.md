@@ -16,13 +16,22 @@ License details: [Creative Commons Attribution 4.0 International License (CC BY 
 We tested 83 species of amphibians (Anura, 43; Caudata, 40), representing 19 families. Using phylogenetic comparative analyses across multiple evolutionary models, we investigated associations between critical thermal maximum (CTmax) and three life-history traits: clutch size, egg size, and age at maturity, while controlling for geographic gradients and body size (snout-vent length).
 
 ## Data collection & processing
-
-Primary physiological and life-history trait data were compiled from published literature and established databases.
+Primary physiological and life-history trait data were compiled from published literature and established databases (for data format specification and complete list of references see Repository structure below).
 Thermal tolerance values were standardized for acclimation temperature, duration, and physiological endpoints using `heatTolerance.R`.
-Species range maps and occurrence records were retrieved from IUCN (2025) and GBIF (gbif.org, 2026), then integrated with the elevation raster from WorldClim 2.1 (Fick & Hijmans, 2017), using `speciesRange.R`.
+Species range maps and occurrence records were retrieved from IUCN (2025) and GBIF (gbif.org, 2026), then integrated with the elevation raster from WorldClim 2.1 (Fick & Hijmans, 2017), using `speciesRange.R` for coordinates cleaning and data merging.
 Phylogenetic comparative analyses (e.g., PGLS and multivariate PGLS) based on the Jetz and Pyron (2018) phylogeny were implemented in R v4.5.3 (R Core Team, 2026). The complete analysis workflow and R package environment are provided in `main.R` and `sessionR_info.txt`, respectively.
 
-## Directory structure
+Main sources used in data collection (please consider to cite them as well):
+
+* Fick SE, Hijmans RJ. 2017 WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas. Int. J. Climatol. 37, 4302–4315. (doi:10.1002/joc.5086) 
+* GBIF: The Global Biodiversity Information Facility. 2026 What is GBIF? See https://www.gbif.org/what-is-gbif
+* IUCN. 2025 The IUCN Red List of Threatened Species. Version 2025-2. See https://www.iucnredlist.org
+* Jetz W, Pyron RA. 2018 The interplay of past diversification and evolutionary isolation with present imperilment across the amphibian tree of life. Nat. Ecol. Evol. 2, 850–858. (doi:10.1038/s41559-018-0515-5)
+* Oliveira BF, São-Pedro VA, Santos-Barrera G, Penone C, Costa GC. 2017 AmphiBIO, a global database for amphibian ecological traits. Sci. Data 4, 170123. (doi:10.1038/sdata.2017.123) 
+* Pottier P et al. 2025 AmphiTherm: a comprehensive database of amphibian thermal tolerance and preference. Sci. Data 12, 1987. (doi:10.1038/s41597-025-06286-w) 
+
+
+## Repository structure
 
 ```text
 
