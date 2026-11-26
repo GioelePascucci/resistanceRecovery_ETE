@@ -9,6 +9,7 @@ This repository contains the raw data, phylogenetic information, and R scripts n
 This material can be freely shared, adapted, or reprocessed (including for commercial use) as long as appropriate credit is given to the authors.
 License details: [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
+Refer to Zenodo publication to cite this repository: [![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.23039857)
 
 **Repository contact:** Gioele Pascucci ([gioelepascucci@live.it](mailto:gioelepascucci@live.it))
 
