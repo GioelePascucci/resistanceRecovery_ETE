@@ -35,13 +35,18 @@ species_original <- str_to_sentence(str_squish(main_data$Species))
 
 # Unzip the IUCN shapefiles into /data directory (Download link: https://www.iucnredlist.org/resources/spatial-data-download#amphibians)
 unzip("../data/AMPHIBIANS.zip", exdir = "../data/IUCN_temp")
-# Read the two parts of the IUCN database
-iucn_part1 <- st_read("../data/IUCN_temp/AMPHIBIANS_PART1.shp", quiet = TRUE)
-iucn_part2 <- st_read("../data/IUCN_temp/AMPHIBIANS_PART2.shp", quiet = TRUE)
-
+# Read the parts of the IUCN database
+iucn_part1 <- st_read("../data/IUCN_temp/spatial_data_1.shp", quiet = TRUE)
+iucn_part2 <- st_read("../data/IUCN_temp/spatial_data_2.shp", quiet = TRUE)
+iucn_part3 <- st_read("../data/IUCN_temp/spatial_data_3.shp", quiet = TRUE)
+iucn_part4 <- st_read("../data/IUCN_temp/spatial_data_4.shp", quiet = TRUE)
+iucn_part5 <- st_read("../data/IUCN_temp/spatial_data_5.shp", quiet = TRUE)
+iucn_part6 <- st_read("../data/IUCN_temp/spatial_data_6.shp", quiet = TRUE)
+iucn_part7 <- st_read("../data/IUCN_temp/spatial_data_7.shp", quiet = TRUE)
+iucn_part8 <- st_read("../data/IUCN_temp/spatial_data_8.shp", quiet = TRUE)
 # Merge into a single spatial dataframe
-iucn_master <- bind_rows(iucn_part1, iucn_part2)
-rm(iucn_part1, iucn_part2)
+iucn_master <- bind_rows(iucn_part1, iucn_part2,iucn_part3,iucn_part4,iucn_part5,iucn_part6,iucn_part7,iucn_part8)
+rm(iucn_part1, iucn_part2,iucn_part3,iucn_part4,iucn_part5,iucn_part6,iucn_part7,iucn_part8)
 
 # Split P. glutinosus complex distribution range (Based on literure; AmphibiaWeb, 2026)
 print("Splitting P. glutinosus and P. grobmani ranges...")
